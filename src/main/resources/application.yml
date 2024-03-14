@@ -4,6 +4,27 @@ server:
     encoding:
       charset: UTF-8
       force: true
+  http2:
+    enabled: true
+  undertow:
+    decode-url: true
+    threads:
+      io: 8 #4core
+      worker: 100
+    url-charset: UTF-8
+
+#spring:
+#  kafka:
+#    bootstrap-servers: {defaultBootstrapServers}
+#    consumer:
+#      bootstrap-servers: ${spring.kafka.bootstrap-servers}
+#      group-id: Event-Noti
+#      client-id: Event-Noti
+#      fetch-max-wait: 500
+#      fetch-min-size: 1
+#    listener:
+#      poll-timeout: 15000
+
 #  data:
 #    redis:
 #      port: 2222
